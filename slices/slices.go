@@ -24,14 +24,14 @@ func main() {
 	s = append(s, "d")
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s)
-	
+
 	c := make([]string, len(s))
 	copy(c, s)
 	fmt.Println("cpy:", c)
 
 	l := s[2:5]
 	fmt.Println("sl1:", l)
-	
+
 	l = s[:5]
 	fmt.Println("sl2:", l)
 
@@ -48,7 +48,7 @@ func main() {
 
 	twoD := make([][]int, 3)
 	for i := range 3 {
-		innerLen := i+1
+		innerLen := i + 1
 		twoD[i] = make([]int, innerLen)
 		for j := range innerLen {
 			twoD[i][j] = i + j
