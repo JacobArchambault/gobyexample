@@ -4,7 +4,7 @@ import "fmt"
 
 type person struct {
 	name string
-	age int
+	age  int
 }
 
 func newPerson(name string) *person {
@@ -27,10 +27,10 @@ func main() {
 	sp.age = 52
 	fmt.Println(sp.age)
 	dog := struct {
-		name string
-		isGood bool 
+		name   string
+		isGood bool
 	}{
-		"Rex", 
+		"Rex",
 		true,
 	}
 	fmt.Println(dog)
