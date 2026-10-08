@@ -18,7 +18,7 @@ func main() {
 	}
 	fmt.Println("\nUsing DecodeRuneInString")
 	for i, w := 0, 0; i < len(s); i += w {
-		runeValue,width := utf8.DecodeRuneInString(s[i:])
+		runeValue, width := utf8.DecodeRuneInString(s[i:])
 		fmt.Printf("%U starts at %d\n", runeValue, i)
 		w = width
 		examineRune(runeValue)
@@ -28,7 +28,7 @@ func main() {
 func examineRune(r rune) {
 	if r == 't' {
 		fmt.Println("found tee")
-	} else if r == 'a' {
+	} else if r == 'ส' {
 		fmt.Println("found so sua")
 	}
 }
