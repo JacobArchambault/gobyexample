@@ -1,4 +1,5 @@
 package main
+
 import "fmt"
 
 func SlicesIndex[S ~[]E, E comparable](s S, v E) int {
@@ -16,7 +17,7 @@ type List[T any] struct {
 
 type element[T any] struct {
 	next *element[T]
-	val T
+	val  T
 }
 
 func (Lst *List[T]) Push(v T) {

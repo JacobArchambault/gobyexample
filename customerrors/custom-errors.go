@@ -6,7 +6,7 @@ import (
 )
 
 type argError struct {
-	arg int
+	arg     int
 	message string
 }
 
@@ -23,7 +23,7 @@ func f(arg int) (int, error) {
 
 func main() {
 	_, err := f(42)
-	if ae, ok := errors. AsType[*argError](err); ok {
+	if ae, ok := errors.AsType[*argError](err); ok {
 		fmt.Println(ae.arg)
 		fmt.Println(ae.message)
 	} else {

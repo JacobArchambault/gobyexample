@@ -13,7 +13,7 @@ type List[T any] struct {
 
 type element[T any] struct {
 	next *element[T]
-	val T
+	val  T
 }
 
 func (lst *List[T]) Push(v T) {
