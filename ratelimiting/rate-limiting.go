@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ func main() {
 	limiter := time.Tick(200 * time.Millisecond)
 
 	for req := range requests {
-		<-limiter 
+		<-limiter
 		fmt.Println("request", req, time.Now())
 	}
 
@@ -36,7 +36,7 @@ func main() {
 	}
 	close(burstyRequests)
 	for req := range burstyRequests {
-		<- burstyLimiter
+		<-burstyLimiter
 		fmt.Println("request", req, time.Now())
 	}
 }
