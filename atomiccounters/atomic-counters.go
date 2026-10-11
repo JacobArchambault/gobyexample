@@ -16,6 +16,6 @@ func main() {
 			}
 		})
 	}
-	wg. Wait()
+	wg.Wait()
 	fmt.Println("ops:", ops.Load())
 }

@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 type Container struct {
-	mu sync.Mutex
+	mu       sync.Mutex
 	counters map[string]int
 }
 
@@ -17,7 +17,7 @@ func (c *Container) inc(name string) {
 }
 
 func main() {
-	c := Container {
+	c := Container{
 		counters: map[string]int{"a": 0, "b": 0},
 	}
 
@@ -35,11 +35,11 @@ func main() {
 	wg.Go(func() {
 		doIncrement("a", 10000)
 	})
-	
+
 	wg.Go(func() {
 		doIncrement("b", 10000)
 	})
 
-	wg.Wait() 
+	wg.Wait()
 	fmt.Println(c.counters)
 }
