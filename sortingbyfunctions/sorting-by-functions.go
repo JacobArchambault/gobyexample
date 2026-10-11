@@ -1,4 +1,4 @@
-package main 
+package main
 
 import (
 	"cmp"
@@ -17,18 +17,18 @@ func main() {
 
 	type Person struct {
 		name string
-		age int
+		age  int
 	}
 
 	people := []Person{
-		Person{name: "Jax", age:37},
-		Person{name: "TJ", age: 25},
-		Person{name: "Alex", age: 72},
+		{name: "Jax", age: 37},
+		{name: "TJ", age: 25},
+		{name: "Alex", age: 72},
 	}
 
-	slices.SortFunc(people, 
-	func(a, b Person) int {
-		return cmp.Compare(a.age, b.age)
-	})
+	slices.SortFunc(people,
+		func(a, b Person) int {
+			return cmp.Compare(a.age, b.age)
+		})
 	fmt.Println(people)
 }
