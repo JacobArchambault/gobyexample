@@ -28,7 +28,7 @@ func main() {
 	t2 := Create("t2", "Name: {{.Name}}\n")
 	t2.Execute(os.Stdout, struct {
 		Name string
-	}{"Jame Doe"})
+	}{"Jane Doe"})
 	t2.Execute(os.Stdout, map[string]string{
 		"Name": "Mickey Mouse",
 	})
