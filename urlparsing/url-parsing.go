@@ -28,4 +28,3 @@ func main() {
 	fmt.Println(m)
 	fmt.Println(m["k"][0])
 }
-
