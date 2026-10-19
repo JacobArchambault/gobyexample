@@ -12,7 +12,7 @@ func main() {
 	var svar string
 	flag.StringVar(&svar, "svar", "bar", "a string var")
 	flag.Parse()
-	fmt.Println("word:", *wordPtr) 
+	fmt.Println("word:", *wordPtr)
 	fmt.Println("numb:", *numbPtr)
 	fmt.Println("fork:", *forkPtr)
 	fmt.Println("svar:", svar)

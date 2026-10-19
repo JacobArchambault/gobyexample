@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"log"
-	"os"
 	"log/slog"
+	"os"
 )
 
 func main() {
@@ -27,4 +27,3 @@ func main() {
 	myslog.Info("hi there")
 	myslog.Info("hello again", "key", "val", "age", 25)
 }
-
